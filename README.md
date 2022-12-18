@@ -17,7 +17,7 @@ $ yarn serve   # preivew built game
 
 ## Project Structure
 ```bash
-assets          # images, icons, css, etc...
+public          # images, icons, css, etc...
 src
 ├── config.ts   # game config
 ├── main.ts     # main (entry point)

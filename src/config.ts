@@ -11,7 +11,7 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   physics: {
     default: 'matter',
     matter: {
-      debug: true,
+      debug: import.meta.env.DEV,
       gravity: { y: 0 },
     },
   },

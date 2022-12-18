@@ -4,10 +4,7 @@ import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
 export default defineConfig({
   resolve: {
-    alias: [
-      { find: '@', replacement: path.resolve(__dirname, 'src') },
-      { find: 'assets', replacement: path.resolve(__dirname, 'assets') },
-    ],
+    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
   build: {
     chunkSizeWarningLimit: 1500,
