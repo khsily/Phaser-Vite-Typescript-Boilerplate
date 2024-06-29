@@ -4,7 +4,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ESNext", "DOM", "scripthost"],
+    "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
     "allowJs": true,
     "strict": true,
@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "typeRoots": ["node_modules/@types", "src/@types"],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
   "include": ["src/**/*"]
 }

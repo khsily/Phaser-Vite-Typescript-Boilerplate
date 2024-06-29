@@ -1,24 +1,17 @@
 import { defineConfig } from 'vite';
-import path from 'path';
 
-import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import eslint from 'vite-plugin-eslint';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  resolve: {
-    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
-  },
+  plugins: [eslint(), tsconfigPaths()],
   build: {
-    chunkSizeWarningLimit: 1500,
-    sourcemap: true,
-  },
-  plugins: [
-    eslint(),
-    chunkSplitPlugin({
-      strategy: 'single-vendor',
-      customSplitting: {
-        'phaser-vendor': ['phaser'],
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          phaser: ['phaser'],
+        },
       },
-    }),
-  ],
+    },
+  },
 });
